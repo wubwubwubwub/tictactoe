@@ -3,10 +3,10 @@
 # board.rb
 
 class Board
-  attr_reader :rows, :layout
+  attr_reader :layout, :rows
 
-  def initialize
-    @rows = get_rows
+  def initialize(rows = get_rows)
+    @rows = rows
     @layout = []
     @rows.times { @layout.push(Array.new(@rows)) }
   end
@@ -32,29 +32,25 @@ class Board
     end 
     @rows
   end
-  
-  # def array_print
-  #   @layout.reverse.each {|row| p row }
-  # end
 
   def pretty_print
     divider = "       --------------------------"
     (rows - 3).times { divider << "----------" }
     @layout.reverse.each_with_index do |x, index|
-      string = "    #{rows - index}    "
+      string_builder = "    #{rows - index}    "
       for i in x
         i = " " if i.nil?
-        string << "#{i}    |    "
+        string_builder << "#{i}    |    "
       end
       puts ""
-      puts string[0...-5]
+      puts string_builder[0...-5]
       puts divider unless index == rows - 1
     end
     puts ""
-    string = "         1"
+    horizontals = "         1"
     for i in 2..rows
-      string << "         #{i}"
+      horizontals << "         #{i}"
     end
-    puts string
+    puts horizontals
   end
 end

@@ -13,7 +13,7 @@ class Player
     @diags = []
     @diags2 = []
   end
-
+  
   def get_name
     puts "One last thing - What's your name?"
     @name = gets.chomp
@@ -39,7 +39,5 @@ class Player
 
   def opponent
     @letter == "O" ? "X" : "O"    
-    # return "X" if @letter == "O"
-    # return "O" if @letter == "X"
   end
 end
