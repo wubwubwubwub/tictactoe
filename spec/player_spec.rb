@@ -1,6 +1,5 @@
-require_relative '../app.rb'
+require_relative '../test.rb'
 require 'spec_helper'
-
 
 describe Player do
 
@@ -10,7 +9,7 @@ describe Player do
     expect(player.nested_selections).to eq([])
     expect(player.outer_selections).to eq([])
     expect(player.diags).to eq([])
-    expect(player.diags2).to eq([])  
+    expect(player.diags_reverse).to eq([])  
   end
   
   describe '#get_letter' do

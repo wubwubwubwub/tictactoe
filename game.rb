@@ -92,12 +92,12 @@ class Game
     player.nested_selections.push(move.nested)
     player.outer_selections.push(move.outer)
     player.diags.push(move) if move.nested == move.outer
-    player.diags2.push(move) if move.nested + move.outer == @board.rows - 1
+    player.diags_reverse.push(move) if move.nested + move.outer == @board.rows - 1
 
     if player.nested_selections.count(move.nested) == board.rows ||
        player.outer_selections.count(move.outer) == board.rows ||
        player.diags.size == board.rows ||
-       player.diags2.size == board.rows
+       player.diags_reverse.size == board.rows
       puts ""
       puts "    ---- #{player.name} is the winner! ----".red
       if player.name == "The Computer"

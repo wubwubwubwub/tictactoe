@@ -3,7 +3,7 @@
 # player.rb
 
 class Player
-  attr_reader :letter, :nested_selections, :outer_selections, :diags, :diags2, :name
+  attr_reader :letter, :nested_selections, :outer_selections, :diags, :diags_reverse, :name
   
   def initialize(letter = get_letter, name = get_name)
     @letter = letter
@@ -11,7 +11,7 @@ class Player
     @nested_selections = []
     @outer_selections = []
     @diags = []
-    @diags2 = []
+    @diags_reverse = []
   end
   
   def get_name

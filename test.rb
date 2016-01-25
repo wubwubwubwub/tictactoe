@@ -1,8 +1,6 @@
-#!/usr/bin/env ruby
-
 # Tic Tac Toe
 # nolan camp - 2016
-# app.rb
+# test.rb
 
 require_relative 'game'
 require_relative 'board'
@@ -11,4 +9,4 @@ require_relative 'move'
 
 require_relative 'core/string'
 
-Game.new
+# script file for rspec

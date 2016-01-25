@@ -1,4 +1,4 @@
-require_relative '../app.rb'
+require_relative '../test.rb'
 require 'spec_helper'
 
 describe Board do
